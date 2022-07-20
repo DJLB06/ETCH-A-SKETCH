@@ -1,10 +1,16 @@
 .container{
     display: grid;
-    grid-template-columns: repeat(16,1fr);
-    border-style:ridge;
+    grid-template-columns: repeat(8,1fr);
+    border-style:groove;
+    border-width: thin;
+    max-width: 450px;
+    justify-content: space-around;
 }
 
 .test1{
-    border-style: ridge;
+    border-style: groove;
+    height: 50px;
+    width: 50px;
+    border-radius: 0.5;
 }
 
