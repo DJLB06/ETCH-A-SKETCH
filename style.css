@@ -3,14 +3,15 @@
     grid-template-columns: repeat(8,1fr);
     border-style:groove;
     border-width: thin;
-    max-width: 450px;
-    justify-content: space-around;
+    max-width: 960px;
+    grid-auto-rows: 50px;
 }
 
-.test1{
+.new-grid-block{
+    display: flex;
+    justify-content: center;
+    align-content: center;
     border-style: groove;
-    height: 50px;
-    width: 50px;
     border-radius: 0.5;
 }
 
