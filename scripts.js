@@ -17,8 +17,14 @@ function hoverEvent(e){
 }
 
 function promptUserInput(e){
-    let gridSquares = prompt("Enter how many squares you want in each row/colum (max 100)");
+    let gridSquares = prompt("Enter how many squares you want in each row/column (1- 50)");
+
+    if(gridSquares > 0 && gridSquares<=50){
     buildUserDefinedGrid(gridSquares);
+    }
+    else{
+        promptUserInput(e);
+    }
 }
 
 buildInitialGrid();
@@ -50,7 +56,7 @@ function buildUserDefinedGrid(gridSquares){
     container.style['grid-template-columns'] = `repeat(${gridSquares},1fr)`;
 
     newGrid = document.querySelectorAll(".new-grid-block");
-    
+
     newGrid.forEach(grid => {
         grid.addEventListener('mouseover', hoverEvent)
     });
