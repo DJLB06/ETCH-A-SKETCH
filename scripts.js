@@ -2,7 +2,22 @@ const container = document.querySelector(".container");
 
 const changeGridSizeButton = document.querySelector(".change-grid-size");
 
+const changeColors = document.querySelector(".change-colors");
+
+const resetButton = document.querySelector(".reset");
+
+
+
+resetButton.addEventListener("click", clearGrid);
+
+
+
+let currentColor = false;
+
+
+
 function buildInitialGrid(){
+ 
     for(let i=0;i<64;i++){
         let cell = document.createElement("div");
         cell.className ="new-grid-block";
@@ -13,7 +28,14 @@ function buildInitialGrid(){
 }
 
 function hoverEvent(e){
+    if(currentColor == true){
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        e.target.style.backgroundColor = `#${randomColor}`;
+    }
+
+    else{
     e.target.style.backgroundColor = 'black';
+    }   
 }
 
 function promptUserInput(e){
@@ -36,6 +58,19 @@ newGrid.forEach(grid => {
 });
 
 changeGridSizeButton.addEventListener("click", promptUserInput);
+
+
+function changeColor(){
+    if(currentColor == false){
+        currentColor = true;
+    }
+    else{
+        currentColor = false;
+    }
+}
+
+changeColors.addEventListener("click", changeColor
+);
 
 function buildUserDefinedGrid(gridSquares){
     
@@ -61,6 +96,21 @@ function buildUserDefinedGrid(gridSquares){
         grid.addEventListener('mouseover', hoverEvent)
     });
 
+}
+
+function clearGrid(){
+    let newGrid = document.querySelectorAll(".new-grid-block");
+    newGrid.forEach(grid => {
+        grid.remove();
+    })
+
+    buildInitialGrid();
+
+    newGrid = document.querySelectorAll(".new-grid-block");
+
+    newGrid.forEach(grid => {
+        grid.addEventListener('mouseover', hoverEvent)
+    });
 }
 
 

@@ -1,20 +1,16 @@
-body{
-    display: flex;
-    justify-content: center;
-    background-color: 	#101010;
-}
 
 .body-container{
+    display: flex;
+    flex-direction: column;
     border-style: solid;
-    background-color: #FF3333;
-    padding: 25px;
+    background-color: #f4f4f4;
+    padding: 100px;
 }
 
 .header{
     display:flex;
     justify-content: center;
     margin-bottom: 100px;
-   
     font-family: 'Kalam', cursive;
     color: black;
     font-size: 3rem;
@@ -22,6 +18,11 @@ body{
     font-variant: small-caps;
     font-style: oblique;
       
+}
+
+.mid-section{
+    display:flex;
+    gap: 40px;  
 }
 
 .container{
@@ -48,6 +49,12 @@ body{
 
 .buttons{
     display: flex;
+    flex-direction: column;
+    border-style: solid;
+    gap: 5px;
+    padding: 10px;
+    min-height: 480px;
+    max-height: 480px;
   
 }
 
@@ -58,5 +65,4 @@ body{
 button{
     width: 10em;
     height:2em;
-    
 }
