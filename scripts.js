@@ -41,6 +41,10 @@ function hoverEvent(e){
 function promptUserInput(e){
     let gridSquares = prompt("Enter how many squares you want in each row/column (1- 50)");
 
+    if (gridSquares === null) {
+        return; 
+    }
+
     if(gridSquares > 0 && gridSquares<=50){
     buildUserDefinedGrid(gridSquares);
     }

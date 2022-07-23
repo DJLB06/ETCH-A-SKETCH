@@ -3,8 +3,9 @@
     display: flex;
     flex-direction: column;
     border-style: solid;
-    background-color: #f4f4f4;
     padding: 100px;
+    background-color: #f4f4f4;
+    align-items: center;
 }
 
 .header{
@@ -12,17 +13,24 @@
     justify-content: center;
     margin-bottom: 100px;
     font-family: 'Kalam', cursive;
-    color: black;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight:bolder;
     font-variant: small-caps;
     font-style: oblique;
-      
+    background-color: #282828;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 50px;
+    min-width: 750px;
+    max-width: 750px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 .mid-section{
     display:flex;
-    gap: 40px;  
+    justify-content: center;
+    gap: 100px;  
 }
 
 .container{
@@ -55,7 +63,8 @@
     padding: 10px;
     min-height: 480px;
     max-height: 480px;
-  
+    background-color: lightsteelblue;
+    border-radius: 20px;
 }
 
 .change-grid-size{
@@ -63,6 +72,9 @@
 }
 
 button{
-    width: 10em;
-    height:2em;
+    width: 8em;
+    height:3em;
+    font-size: medium;
+    color:black;
+    font-family: 'Kalam', cursive;
 }
